@@ -1,4 +1,4 @@
-# IfcOpenShell-Exercise
+# IfcOpenShell & Python
 ## An exercise of IfcOpenShell
 
 ### The task:
