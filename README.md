@@ -7,10 +7,6 @@ From an IFC file (BIM4EEB-TUD-2x3.ifc), make a dictionary of all walls (IfcWallS
 - dimensions
 - the total window area of the wall
 
-### The result of the assignment includes two file:
-- A report of the assignment, explain what results you achieved and how you did it. The format of the report should be a .pdf file;
-- The Python code with the format of .py file.
-
 ### Requirements of the Python code:
 #### The main part of the code should be wrapped in the main() function, for example:
 def main(model_path):
@@ -41,7 +37,7 @@ The input should be the path to your IFC file, and the output should be a list i
 
 #### Abstract
 
-The goal of this assignment was to identify walls in an IFC model that have windows a􀆩ached to them and to retrieve important information such as the dimensions, GUID of the walls and the total window area associated with each wall. I achieved this using IfcOpenShell with Python to analyze the IFC file.
+The goal of this assignment was to identify walls in an IFC model that have windows attached to them and to retrieve important information such as the dimensions, GUID of the walls and the total window area associated with each wall. I achieved this using IfcOpenShell with Python to analyze the IFC file.
 
 #### Approach
 
@@ -53,8 +49,7 @@ The goal of this assignment was to identify walls in an IFC model that have wind
 
 #### 2. Identifying walls with windows:
 I wrote the function get_walls_have_windows() to loop through each wall and check for any windows associated with it. The process was as follows:
-* I checked if each wall has an a􀆩ribute called “HasOpenings”. This indicates if the wall contains or
-voids an opening.
+* I checked if each wall has an a􀆩ribute called “HasOpenings”. This indicates if the wall contains or voids an opening.
 * Through the “HasOpenings” relationship, I retrieved the IfcOpeningElement, which represents an opening in the wall (like a hole or void for a window).
 * If this opening had fillings, I then looked for the “HasFillings” relationship, which pointed to elements like windows. When I found an IfcWindow, I knew that this wall had windows attached to it.
 
